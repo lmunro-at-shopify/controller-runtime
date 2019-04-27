@@ -224,6 +224,7 @@ func (s *Server) run(stop <-chan struct{}) error { // nolint: gocyclo
 			Handler: s.sMux,
 		}
 		log.Info("starting the webhook server.")
+		s.httpServer.SetKeepAlivesEnabled(false)
 		errCh <- s.httpServer.ListenAndServeTLS(path.Join(s.CertDir, writer.ServerCertName), path.Join(s.CertDir, writer.ServerKeyName))
 	}
 
