@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"k8s.io/apimachinery/pkg/types"
-	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/reconcile"
 )
 
 // This example implements a simple no-op reconcile function that prints the object to be Reconciled.

@@ -18,7 +18,7 @@ package metrics
 
 import (
 	"github.com/prometheus/client_golang/prometheus"
-	"lmunro-at-shopify/controller-runtime/pkg/metrics"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/metrics"
 )
 
 var (

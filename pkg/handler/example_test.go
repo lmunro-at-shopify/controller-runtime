@@ -21,11 +21,11 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/util/workqueue"
-	"lmunro-at-shopify/controller-runtime/pkg/controller"
-	"lmunro-at-shopify/controller-runtime/pkg/event"
-	"lmunro-at-shopify/controller-runtime/pkg/handler"
-	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
-	"lmunro-at-shopify/controller-runtime/pkg/source"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/controller"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/event"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/handler"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/source"
 )
 
 var c controller.Controller

@@ -25,10 +25,10 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/util/workqueue"
-	"lmunro-at-shopify/controller-runtime/pkg/controller/controllertest"
-	"lmunro-at-shopify/controller-runtime/pkg/event"
-	"lmunro-at-shopify/controller-runtime/pkg/handler"
-	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/controller/controllertest"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/event"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/handler"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/reconcile"
 )
 
 var _ = Describe("Eventhandler", func() {

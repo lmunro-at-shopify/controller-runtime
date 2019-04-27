@@ -23,12 +23,12 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
-	"lmunro-at-shopify/controller-runtime/pkg/event"
-	"lmunro-at-shopify/controller-runtime/pkg/handler"
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/event"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/handler"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"lmunro-at-shopify/controller-runtime/pkg/predicate"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/predicate"
 )
 
 var log = logf.KBLog.WithName("source").WithName("EventHandler")

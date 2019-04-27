@@ -22,14 +22,14 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/types"
-	"lmunro-at-shopify/controller-runtime/pkg/controller"
-	"lmunro-at-shopify/controller-runtime/pkg/handler"
-	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
-	"lmunro-at-shopify/controller-runtime/pkg/source"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/controller"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/handler"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/source"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"lmunro-at-shopify/controller-runtime/pkg/manager"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/manager"
 )
 
 var _ = Describe("controller", func() {

@@ -25,7 +25,7 @@ import (
 
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var (

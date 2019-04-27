@@ -18,10 +18,10 @@ package source_test
 
 import (
 	"k8s.io/api/core/v1"
-	"lmunro-at-shopify/controller-runtime/pkg/controller"
-	"lmunro-at-shopify/controller-runtime/pkg/event"
-	"lmunro-at-shopify/controller-runtime/pkg/handler"
-	"lmunro-at-shopify/controller-runtime/pkg/source"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/controller"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/event"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/handler"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/source"
 )
 
 var ctrl controller.Controller

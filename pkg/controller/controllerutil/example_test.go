@@ -24,8 +24,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"lmunro-at-shopify/controller-runtime/pkg/controller/controllerutil"
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/controller/controllerutil"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var (

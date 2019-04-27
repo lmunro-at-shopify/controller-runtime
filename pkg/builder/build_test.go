@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"strings"
 
-	"lmunro-at-shopify/controller-runtime/pkg/handler"
-	"lmunro-at-shopify/controller-runtime/pkg/source"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/handler"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/source"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -33,10 +33,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/rest"
-	"lmunro-at-shopify/controller-runtime/pkg/client/apiutil"
-	"lmunro-at-shopify/controller-runtime/pkg/controller"
-	"lmunro-at-shopify/controller-runtime/pkg/manager"
-	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client/apiutil"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/controller"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/manager"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/reconcile"
 )
 
 var _ = Describe("application", func() {

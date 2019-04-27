@@ -25,7 +25,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/leaderelection/resourcelock"
-	"lmunro-at-shopify/controller-runtime/pkg/recorder"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/recorder"
 )
 
 const inClusterNamespacePath = "/var/run/secrets/kubernetes.io/serviceaccount/namespace"

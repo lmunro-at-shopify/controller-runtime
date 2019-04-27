@@ -26,10 +26,10 @@ import (
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/rest"
 	toolscache "k8s.io/client-go/tools/cache"
-	"lmunro-at-shopify/controller-runtime/pkg/cache/internal"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/client/apiutil"
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/cache/internal"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client/apiutil"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var log = logf.KBLog.WithName("object-cache")

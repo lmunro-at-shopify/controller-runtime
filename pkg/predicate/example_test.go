@@ -17,8 +17,8 @@ limitations under the License.
 package predicate_test
 
 import (
-	"lmunro-at-shopify/controller-runtime/pkg/event"
-	"lmunro-at-shopify/controller-runtime/pkg/predicate"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/event"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/predicate"
 )
 
 var p predicate.Predicate

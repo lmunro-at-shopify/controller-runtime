@@ -21,7 +21,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 func TestSource(t *testing.T) {

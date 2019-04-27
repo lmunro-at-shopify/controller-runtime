@@ -23,8 +23,8 @@ import (
 
 	appsv1 "k8s.io/api/apps/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/reconcile"
 )
 
 // reconcileReplicaSet reconciles ReplicaSets

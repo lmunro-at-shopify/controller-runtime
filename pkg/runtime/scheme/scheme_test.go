@@ -24,7 +24,7 @@ import (
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"lmunro-at-shopify/controller-runtime/pkg/runtime/scheme"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/scheme"
 )
 
 var _ = Describe("Scheme", func() {

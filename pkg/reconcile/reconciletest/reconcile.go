@@ -16,7 +16,7 @@ limitations under the License.
 
 package reconciletest
 
-import "lmunro-at-shopify/controller-runtime/pkg/reconcile"
+import "github.com/lmunro-at-shopify/controller-runtime/pkg/reconcile"
 
 var _ reconcile.Reconciler = &FakeReconcile{}
 

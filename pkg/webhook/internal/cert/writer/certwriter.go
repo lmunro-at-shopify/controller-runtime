@@ -24,7 +24,7 @@ import (
 	"time"
 
 	"k8s.io/apimachinery/pkg/runtime"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
 )
 
 const (

@@ -23,9 +23,9 @@ import (
 	. "github.com/onsi/gomega"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
-	"lmunro-at-shopify/controller-runtime/pkg/cache"
-	"lmunro-at-shopify/controller-runtime/pkg/envtest"
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/cache"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/envtest"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 func TestSource(t *testing.T) {

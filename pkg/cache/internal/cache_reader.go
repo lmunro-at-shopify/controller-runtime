@@ -29,7 +29,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/selection"
 	"k8s.io/client-go/tools/cache"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
 )
 
 // CacheReader is a CacheReader

@@ -24,8 +24,8 @@ import (
 	"path"
 
 	"k8s.io/apimachinery/pkg/runtime"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer/atomic"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer/atomic"
 )
 
 // fsCertWriter provisions the certificate by reading and writing to the filesystem.

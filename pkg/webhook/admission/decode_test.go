@@ -24,7 +24,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/kubernetes/scheme"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
 )
 
 var _ = Describe("admission webhook decoder", func() {

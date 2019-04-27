@@ -26,7 +26,7 @@ import (
 	typedcorev1 "k8s.io/client-go/kubernetes/typed/core/v1"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/record"
-	"lmunro-at-shopify/controller-runtime/pkg/recorder"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/recorder"
 )
 
 type provider struct {

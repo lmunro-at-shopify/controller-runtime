@@ -22,16 +22,16 @@ import (
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
-	"lmunro-at-shopify/controller-runtime/pkg/event"
-	"lmunro-at-shopify/controller-runtime/pkg/handler"
-	"lmunro-at-shopify/controller-runtime/pkg/source/internal"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/event"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/handler"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/source/internal"
 
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"lmunro-at-shopify/controller-runtime/pkg/controller/controllertest"
-	"lmunro-at-shopify/controller-runtime/pkg/predicate"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/controller/controllertest"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/predicate"
 )
 
 var _ = Describe("Internal", func() {

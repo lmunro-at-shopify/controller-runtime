@@ -28,13 +28,13 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	apitypes "k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/manager"
-	"lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
-	atypes "lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/manager"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
+	atypes "github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/types"
 )
 
 // default interval for checking cert is 90 days (~3 months)

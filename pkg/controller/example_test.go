@@ -22,13 +22,13 @@ import (
 	"k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"lmunro-at-shopify/controller-runtime/pkg/controller"
-	"lmunro-at-shopify/controller-runtime/pkg/handler"
-	"lmunro-at-shopify/controller-runtime/pkg/manager"
-	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
-	"lmunro-at-shopify/controller-runtime/pkg/runtime/signals"
-	"lmunro-at-shopify/controller-runtime/pkg/source"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/controller"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/handler"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/manager"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/signals"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/source"
 )
 
 var (

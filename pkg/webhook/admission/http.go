@@ -31,8 +31,8 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/metrics"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/metrics"
 )
 
 var admissionv1beta1scheme = runtime.NewScheme()

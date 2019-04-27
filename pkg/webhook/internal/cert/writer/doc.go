@@ -58,7 +58,7 @@ Inject necessary information given the objects.
 package writer
 
 import (
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var log = logf.KBLog.WithName("admission").WithName("cert").WithName("writer")

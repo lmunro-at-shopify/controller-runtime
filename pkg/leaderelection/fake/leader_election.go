@@ -24,8 +24,8 @@ import (
 	"k8s.io/apimachinery/pkg/util/uuid"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/leaderelection/resourcelock"
-	"lmunro-at-shopify/controller-runtime/pkg/leaderelection"
-	"lmunro-at-shopify/controller-runtime/pkg/recorder"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/leaderelection"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/recorder"
 )
 
 // NewResourceLock creates a new ResourceLock for use in testing

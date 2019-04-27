@@ -32,12 +32,12 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/intstr"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/client/config"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/admission"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client/config"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/types"
 )
 
 // setDefault does defaulting for the Server.

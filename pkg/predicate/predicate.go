@@ -17,8 +17,8 @@ limitations under the License.
 package predicate
 
 import (
-	"lmunro-at-shopify/controller-runtime/pkg/event"
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/event"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var log = logf.KBLog.WithName("predicate").WithName("eventFilters")

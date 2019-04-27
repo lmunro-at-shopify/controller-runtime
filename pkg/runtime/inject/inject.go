@@ -19,9 +19,9 @@ package inject
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/rest"
-	"lmunro-at-shopify/controller-runtime/pkg/cache"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/cache"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
 )
 
 // Cache is used by the ControllerManager to inject Cache into Sources, EventHandlers, Predicates, and

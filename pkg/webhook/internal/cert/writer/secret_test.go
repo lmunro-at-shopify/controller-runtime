@@ -23,10 +23,10 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/client/fake"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
-	fakegenerator "lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator/fake"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client/fake"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
+	fakegenerator "github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator/fake"
 )
 
 var _ = Describe("secretCertWriter", func() {

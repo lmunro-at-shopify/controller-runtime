@@ -31,10 +31,10 @@ import (
 	admissionv1beta1 "k8s.io/api/admission/v1beta1"
 	admissionregistrationv1beta1 "k8s.io/api/admissionregistration/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
-	atypes "lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
+	atypes "github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/types"
 )
 
 // Handler can handle an AdmissionRequest.

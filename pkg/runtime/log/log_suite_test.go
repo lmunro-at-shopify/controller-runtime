@@ -21,7 +21,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"lmunro-at-shopify/controller-runtime/pkg/envtest/printer"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/envtest/printer"
 )
 
 func TestSource(t *testing.T) {

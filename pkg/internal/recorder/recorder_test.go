@@ -21,7 +21,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"k8s.io/client-go/kubernetes/scheme"
-	"lmunro-at-shopify/controller-runtime/pkg/internal/recorder"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/internal/recorder"
 )
 
 var _ = Describe("recorder.Provider", func() {

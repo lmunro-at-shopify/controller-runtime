@@ -20,7 +20,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
 )
 
 // CertGenerator is a certGenerator for testing.

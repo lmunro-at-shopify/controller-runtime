@@ -23,9 +23,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/kubernetes/scheme"
 	toolscache "k8s.io/client-go/tools/cache"
-	"lmunro-at-shopify/controller-runtime/pkg/cache"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/controller/controllertest"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/cache"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/controller/controllertest"
 )
 
 var _ cache.Cache = &FakeInformers{}

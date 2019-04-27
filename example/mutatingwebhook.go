@@ -21,10 +21,10 @@ import (
 	"net/http"
 
 	corev1 "k8s.io/api/core/v1"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/admission"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
 )
 
 // podAnnotator annotates Pods

@@ -31,8 +31,8 @@ import (
 
 	admissionv1beta1 "k8s.io/api/admission/v1beta1"
 	admissionregistrationv1beta1 "k8s.io/api/admissionregistration/v1beta1"
-	atypes "lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
-	"lmunro-at-shopify/controller-runtime/pkg/webhook/types"
+	atypes "github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/types"
 )
 
 var _ = Describe("admission webhook", func() {

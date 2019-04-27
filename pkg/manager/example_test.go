@@ -19,10 +19,10 @@ package manager_test
 import (
 	"os"
 
-	"lmunro-at-shopify/controller-runtime/pkg/client/config"
-	"lmunro-at-shopify/controller-runtime/pkg/manager"
-	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
-	"lmunro-at-shopify/controller-runtime/pkg/runtime/signals"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client/config"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/manager"
+	logf "github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/signals"
 )
 
 var (

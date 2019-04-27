@@ -23,8 +23,8 @@ import (
 	. "github.com/onsi/gomega"
 
 	"k8s.io/client-go/rest"
-	"lmunro-at-shopify/controller-runtime/pkg/client"
-	"lmunro-at-shopify/controller-runtime/pkg/envtest"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
+	"github.com/lmunro-at-shopify/controller-runtime/pkg/envtest"
 )
 
 func TestControllerutil(t *testing.T) {
