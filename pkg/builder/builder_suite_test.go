@@ -22,9 +22,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"k8s.io/client-go/rest"
-	"sigs.k8s.io/controller-runtime/pkg/envtest"
-	"sigs.k8s.io/controller-runtime/pkg/metrics"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/envtest"
+	"lmunro-at-shopify/controller-runtime/pkg/metrics"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 func TestSource(t *testing.T) {

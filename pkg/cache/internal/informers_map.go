@@ -31,7 +31,7 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/cache"
 
-	"sigs.k8s.io/controller-runtime/pkg/client/apiutil"
+	"lmunro-at-shopify/controller-runtime/pkg/client/apiutil"
 )
 
 // clientListWatcherFunc knows how to create a ListWatcher

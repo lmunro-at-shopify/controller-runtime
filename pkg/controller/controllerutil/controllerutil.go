@@ -25,8 +25,8 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/controller-runtime/pkg/client"
-	"sigs.k8s.io/controller-runtime/pkg/client/apiutil"
+	"lmunro-at-shopify/controller-runtime/pkg/client"
+	"lmunro-at-shopify/controller-runtime/pkg/client/apiutil"
 )
 
 // AlreadyOwnedError is an error returned if the object you are trying to assign

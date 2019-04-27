@@ -19,9 +19,9 @@ package handler
 import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/util/workqueue"
-	"sigs.k8s.io/controller-runtime/pkg/event"
-	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/event"
+	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var enqueueLog = logf.KBLog.WithName("eventhandler").WithName("EnqueueRequestForObject")

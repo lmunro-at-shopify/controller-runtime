@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"time"
 
-	"sigs.k8s.io/controller-runtime/pkg/event"
-	"sigs.k8s.io/controller-runtime/pkg/handler"
-	"sigs.k8s.io/controller-runtime/pkg/runtime/inject"
-	"sigs.k8s.io/controller-runtime/pkg/source"
+	"lmunro-at-shopify/controller-runtime/pkg/event"
+	"lmunro-at-shopify/controller-runtime/pkg/handler"
+	"lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
+	"lmunro-at-shopify/controller-runtime/pkg/source"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

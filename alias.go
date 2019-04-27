@@ -21,14 +21,14 @@ package controllerruntime
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"sigs.k8s.io/controller-runtime/pkg/builder"
-	"sigs.k8s.io/controller-runtime/pkg/client/config"
-	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
-	"sigs.k8s.io/controller-runtime/pkg/manager"
-	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	"sigs.k8s.io/controller-runtime/pkg/runtime/log"
-	"sigs.k8s.io/controller-runtime/pkg/runtime/scheme"
-	"sigs.k8s.io/controller-runtime/pkg/runtime/signals"
+	"lmunro-at-shopify/controller-runtime/pkg/builder"
+	"lmunro-at-shopify/controller-runtime/pkg/client/config"
+	"lmunro-at-shopify/controller-runtime/pkg/controller/controllerutil"
+	"lmunro-at-shopify/controller-runtime/pkg/manager"
+	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/runtime/scheme"
+	"lmunro-at-shopify/controller-runtime/pkg/runtime/signals"
 )
 
 // Builder builds an Application ControllerManagedBy (e.g. Operator) and returns a manager.Manager to start it.

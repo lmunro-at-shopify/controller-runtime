@@ -20,12 +20,12 @@ import (
 	"fmt"
 
 	"k8s.io/client-go/util/workqueue"
-	"sigs.k8s.io/controller-runtime/pkg/handler"
-	"sigs.k8s.io/controller-runtime/pkg/internal/controller"
-	"sigs.k8s.io/controller-runtime/pkg/manager"
-	"sigs.k8s.io/controller-runtime/pkg/predicate"
-	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	"sigs.k8s.io/controller-runtime/pkg/source"
+	"lmunro-at-shopify/controller-runtime/pkg/handler"
+	"lmunro-at-shopify/controller-runtime/pkg/internal/controller"
+	"lmunro-at-shopify/controller-runtime/pkg/manager"
+	"lmunro-at-shopify/controller-runtime/pkg/predicate"
+	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"lmunro-at-shopify/controller-runtime/pkg/source"
 )
 
 // Options are the arguments for creating a new Controller

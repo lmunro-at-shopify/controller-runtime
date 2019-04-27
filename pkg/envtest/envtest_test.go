@@ -26,7 +26,7 @@ import (
 	"k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
-	"sigs.k8s.io/controller-runtime/pkg/client"
+	"lmunro-at-shopify/controller-runtime/pkg/client"
 )
 
 var _ = Describe("Test", func() {

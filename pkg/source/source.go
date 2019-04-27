@@ -23,15 +23,15 @@ import (
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/util/workqueue"
-	"sigs.k8s.io/controller-runtime/pkg/event"
-	"sigs.k8s.io/controller-runtime/pkg/handler"
-	"sigs.k8s.io/controller-runtime/pkg/runtime/inject"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
-	"sigs.k8s.io/controller-runtime/pkg/source/internal"
+	"lmunro-at-shopify/controller-runtime/pkg/event"
+	"lmunro-at-shopify/controller-runtime/pkg/handler"
+	"lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/source/internal"
 
 	toolscache "k8s.io/client-go/tools/cache"
-	"sigs.k8s.io/controller-runtime/pkg/cache"
-	"sigs.k8s.io/controller-runtime/pkg/predicate"
+	"lmunro-at-shopify/controller-runtime/pkg/cache"
+	"lmunro-at-shopify/controller-runtime/pkg/predicate"
 )
 
 var log = logf.KBLog.WithName("source")

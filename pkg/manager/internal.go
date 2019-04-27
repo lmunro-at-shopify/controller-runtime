@@ -31,13 +31,13 @@ import (
 	"k8s.io/client-go/tools/leaderelection"
 	"k8s.io/client-go/tools/leaderelection/resourcelock"
 	"k8s.io/client-go/tools/record"
-	"sigs.k8s.io/controller-runtime/pkg/cache"
-	"sigs.k8s.io/controller-runtime/pkg/client"
-	"sigs.k8s.io/controller-runtime/pkg/metrics"
-	"sigs.k8s.io/controller-runtime/pkg/recorder"
-	"sigs.k8s.io/controller-runtime/pkg/runtime/inject"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
-	"sigs.k8s.io/controller-runtime/pkg/webhook/admission/types"
+	"lmunro-at-shopify/controller-runtime/pkg/cache"
+	"lmunro-at-shopify/controller-runtime/pkg/client"
+	"lmunro-at-shopify/controller-runtime/pkg/metrics"
+	"lmunro-at-shopify/controller-runtime/pkg/recorder"
+	"lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
 )
 
 var log = logf.KBLog.WithName("manager")

@@ -19,10 +19,10 @@ package manager_test
 import (
 	"os"
 
-	"sigs.k8s.io/controller-runtime/pkg/client/config"
-	"sigs.k8s.io/controller-runtime/pkg/manager"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
-	"sigs.k8s.io/controller-runtime/pkg/runtime/signals"
+	"lmunro-at-shopify/controller-runtime/pkg/client/config"
+	"lmunro-at-shopify/controller-runtime/pkg/manager"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/runtime/signals"
 )
 
 var (

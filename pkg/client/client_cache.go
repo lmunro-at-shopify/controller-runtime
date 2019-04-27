@@ -27,7 +27,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/client-go/rest"
-	"sigs.k8s.io/controller-runtime/pkg/client/apiutil"
+	"lmunro-at-shopify/controller-runtime/pkg/client/apiutil"
 )
 
 // clientCache creates and caches rest clients and metadata for Kubernetes types

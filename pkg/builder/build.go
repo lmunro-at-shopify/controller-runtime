@@ -22,14 +22,14 @@ import (
 
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/rest"
-	"sigs.k8s.io/controller-runtime/pkg/client/apiutil"
-	"sigs.k8s.io/controller-runtime/pkg/client/config"
-	"sigs.k8s.io/controller-runtime/pkg/controller"
-	"sigs.k8s.io/controller-runtime/pkg/handler"
-	"sigs.k8s.io/controller-runtime/pkg/manager"
-	"sigs.k8s.io/controller-runtime/pkg/predicate"
-	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	"sigs.k8s.io/controller-runtime/pkg/source"
+	"lmunro-at-shopify/controller-runtime/pkg/client/apiutil"
+	"lmunro-at-shopify/controller-runtime/pkg/client/config"
+	"lmunro-at-shopify/controller-runtime/pkg/controller"
+	"lmunro-at-shopify/controller-runtime/pkg/handler"
+	"lmunro-at-shopify/controller-runtime/pkg/manager"
+	"lmunro-at-shopify/controller-runtime/pkg/predicate"
+	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"lmunro-at-shopify/controller-runtime/pkg/source"
 )
 
 // Supporting mocking out functions for testing

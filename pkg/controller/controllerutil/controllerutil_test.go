@@ -30,7 +30,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/kubernetes/scheme"
-	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
+	"lmunro-at-shopify/controller-runtime/pkg/controller/controllerutil"
 )
 
 var _ = Describe("Controllerutil", func() {

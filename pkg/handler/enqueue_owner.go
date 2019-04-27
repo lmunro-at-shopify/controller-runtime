@@ -24,10 +24,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/client-go/util/workqueue"
-	"sigs.k8s.io/controller-runtime/pkg/event"
-	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	"sigs.k8s.io/controller-runtime/pkg/runtime/inject"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/event"
+	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var _ EventHandler = &EnqueueRequestForOwner{}

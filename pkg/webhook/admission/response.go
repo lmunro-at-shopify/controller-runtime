@@ -22,8 +22,8 @@ import (
 	admissionv1beta1 "k8s.io/api/admission/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
-	"sigs.k8s.io/controller-runtime/pkg/patch"
-	"sigs.k8s.io/controller-runtime/pkg/webhook/admission/types"
+	"lmunro-at-shopify/controller-runtime/pkg/patch"
+	"lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
 )
 
 // ErrorResponse creates a new Response for error-handling a request.

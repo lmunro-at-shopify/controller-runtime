@@ -24,9 +24,9 @@ import (
 	. "github.com/onsi/gomega"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/rest"
-	"sigs.k8s.io/controller-runtime/pkg/cache"
-	"sigs.k8s.io/controller-runtime/pkg/cache/informertest"
-	"sigs.k8s.io/controller-runtime/pkg/client"
+	"lmunro-at-shopify/controller-runtime/pkg/cache"
+	"lmunro-at-shopify/controller-runtime/pkg/cache/informertest"
+	"lmunro-at-shopify/controller-runtime/pkg/client"
 )
 
 var instance *testSource

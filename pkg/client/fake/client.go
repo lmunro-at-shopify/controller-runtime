@@ -29,9 +29,9 @@ import (
 	"k8s.io/client-go/kubernetes/scheme"
 	"k8s.io/client-go/testing"
 
-	"sigs.k8s.io/controller-runtime/pkg/client"
-	"sigs.k8s.io/controller-runtime/pkg/client/apiutil"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/client"
+	"lmunro-at-shopify/controller-runtime/pkg/client/apiutil"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var (

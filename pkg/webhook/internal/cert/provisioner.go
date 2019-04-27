@@ -25,8 +25,8 @@ import (
 
 	admissionregistrationv1beta1 "k8s.io/api/admissionregistration/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime"
-	"sigs.k8s.io/controller-runtime/pkg/webhook/internal/cert/generator"
-	"sigs.k8s.io/controller-runtime/pkg/webhook/internal/cert/writer"
+	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
+	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer"
 )
 
 // Provisioner provisions certificates for webhook configurations and writes them to an output

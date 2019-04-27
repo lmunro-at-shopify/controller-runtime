@@ -27,8 +27,8 @@ import (
 	. "github.com/onsi/gomega"
 
 	admissionv1beta1 "k8s.io/api/admission/v1beta1"
-	atypes "sigs.k8s.io/controller-runtime/pkg/webhook/admission/types"
-	"sigs.k8s.io/controller-runtime/pkg/webhook/types"
+	atypes "lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
+	"lmunro-at-shopify/controller-runtime/pkg/webhook/types"
 )
 
 var _ = Describe("admission webhook http handler", func() {

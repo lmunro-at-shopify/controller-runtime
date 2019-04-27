@@ -21,16 +21,16 @@ import (
 	"fmt"
 	"os"
 
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
-	"sigs.k8s.io/controller-runtime/pkg/builder"
-	"sigs.k8s.io/controller-runtime/pkg/client"
-	"sigs.k8s.io/controller-runtime/pkg/client/config"
-	"sigs.k8s.io/controller-runtime/pkg/manager"
-	"sigs.k8s.io/controller-runtime/pkg/reconcile"
-	"sigs.k8s.io/controller-runtime/pkg/runtime/signals"
+	"lmunro-at-shopify/controller-runtime/pkg/builder"
+	"lmunro-at-shopify/controller-runtime/pkg/client"
+	"lmunro-at-shopify/controller-runtime/pkg/client/config"
+	"lmunro-at-shopify/controller-runtime/pkg/manager"
+	"lmunro-at-shopify/controller-runtime/pkg/reconcile"
+	"lmunro-at-shopify/controller-runtime/pkg/runtime/signals"
 )
 
 // This example creates a simple application ControllerManagedBy that is configured for ReplicaSets and Pods.

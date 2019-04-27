@@ -23,7 +23,7 @@ import (
 
 	"k8s.io/api/admission/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var (

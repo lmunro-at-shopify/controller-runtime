@@ -27,9 +27,9 @@ import (
 	. "github.com/onsi/gomega"
 
 	"k8s.io/apimachinery/pkg/runtime"
-	"sigs.k8s.io/controller-runtime/pkg/webhook/internal/cert"
-	"sigs.k8s.io/controller-runtime/pkg/webhook/internal/cert/generator"
-	"sigs.k8s.io/controller-runtime/pkg/webhook/internal/cert/writer"
+	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert"
+	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
+	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer"
 	"sigs.k8s.io/testing_frameworks/integration/addr"
 )
 

@@ -17,8 +17,8 @@ limitations under the License.
 package predicate
 
 import (
-	"sigs.k8s.io/controller-runtime/pkg/event"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/event"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var log = logf.KBLog.WithName("predicate").WithName("eventFilters")

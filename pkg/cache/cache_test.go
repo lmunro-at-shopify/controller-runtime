@@ -31,8 +31,8 @@ import (
 	kscheme "k8s.io/client-go/kubernetes/scheme"
 	kcache "k8s.io/client-go/tools/cache"
 
-	"sigs.k8s.io/controller-runtime/pkg/cache"
-	"sigs.k8s.io/controller-runtime/pkg/client"
+	"lmunro-at-shopify/controller-runtime/pkg/cache"
+	"lmunro-at-shopify/controller-runtime/pkg/client"
 )
 
 const testNamespaceOne = "test-namespace-1"

@@ -24,10 +24,10 @@ import (
 
 	apiextensionsv1beta1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1beta1"
 	"k8s.io/client-go/rest"
-	"sigs.k8s.io/controller-runtime/pkg/client/config"
+	"lmunro-at-shopify/controller-runtime/pkg/client/config"
 	"sigs.k8s.io/testing_frameworks/integration"
 
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 var log = logf.KBLog.WithName("test-env")

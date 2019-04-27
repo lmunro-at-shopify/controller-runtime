@@ -24,8 +24,8 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"sigs.k8s.io/controller-runtime/pkg/webhook/internal/cert/generator"
-	fakegenerator "sigs.k8s.io/controller-runtime/pkg/webhook/internal/cert/generator/fake"
+	"lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator"
+	fakegenerator "lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/generator/fake"
 )
 
 var _ = Describe("fsCertWriter", func() {

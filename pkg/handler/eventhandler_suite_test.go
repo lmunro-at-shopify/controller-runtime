@@ -21,8 +21,8 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"sigs.k8s.io/controller-runtime/pkg/envtest"
-	logf "sigs.k8s.io/controller-runtime/pkg/runtime/log"
+	"lmunro-at-shopify/controller-runtime/pkg/envtest"
+	logf "lmunro-at-shopify/controller-runtime/pkg/runtime/log"
 )
 
 func TestEventhandler(t *testing.T) {
