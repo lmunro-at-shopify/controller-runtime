@@ -23,6 +23,7 @@ import (
 	"io"
 	"net"
 	"net/http"
+	"os"
 	"path"
 	"strconv"
 	"sync"
@@ -223,22 +224,32 @@ func (s *Server) run(stop <-chan struct{}) error { // nolint: gocyclo
 
 	errCh := make(chan error)
 	serveFn := func() {
-		cert, err := tls.LoadX509KeyPair(
-			path.Join(s.CertDir, certWriter.ServerCertName),
-			path.Join(s.CertDir, certWriter.ServerKeyName))
-		if err != nil {
-			errCh <- err
-		}
+		var listener net.Listener
+		var err error
+		if _, found := os.LookupEnv("WEBHOOK_DISABLE_TLS"); found {
+			log.Info("TLS disabled by policy")
+			listener, err = net.Listen("tcp", ":"+strconv.Itoa(int(s.Port)))
+			if err != nil {
+				errCh <- err
+			}
+		} else {
+			cert, err := tls.LoadX509KeyPair(
+				path.Join(s.CertDir, certWriter.ServerCertName),
+				path.Join(s.CertDir, certWriter.ServerKeyName))
+			if err != nil {
+				errCh <- err
+			}
 
-		cfg := &tls.Config{
-			Certificates: []tls.Certificate{cert},
-			NextProtos:   []string{"http1.1"},
-		}
+			cfg := &tls.Config{
+				Certificates: []tls.Certificate{cert},
+				NextProtos:   []string{"http1.1"},
+			}
 
-		// TODO: fix address
-		listener, err := tls.Listen("tcp", net.JoinHostPort("0.0.0.0", strconv.Itoa(int(s.Port))), cfg)
-		if err != nil {
-			errCh <- err
+			// TODO: fix address
+			listener, err = tls.Listen("tcp", ":"+strconv.Itoa(int(s.Port)), cfg)
+			if err != nil {
+				errCh <- err
+			}
 		}
 
 		s.httpServer = &http.Server{
