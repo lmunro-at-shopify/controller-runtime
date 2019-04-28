@@ -18,23 +18,26 @@ package webhook
 
 import (
 	"context"
+	"crypto/tls"
 	"fmt"
 	"io"
+	"net"
 	"net/http"
 	"path"
+	"strconv"
 	"sync"
 	"time"
 
-	"k8s.io/apimachinery/pkg/runtime"
-	apitypes "k8s.io/apimachinery/pkg/types"
-	"k8s.io/apimachinery/pkg/util/wait"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/manager"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/runtime/inject"
 	atypes "github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission/types"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert"
-	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer"
+	certWriter "github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/types"
+	"k8s.io/apimachinery/pkg/runtime"
+	apitypes "k8s.io/apimachinery/pkg/types"
+	"k8s.io/apimachinery/pkg/util/wait"
 )
 
 // default interval for checking cert is 90 days (~3 months)
@@ -217,15 +220,34 @@ func (s *Server) Start(stop <-chan struct{}) error {
 }
 
 func (s *Server) run(stop <-chan struct{}) error { // nolint: gocyclo
+
 	errCh := make(chan error)
 	serveFn := func() {
+		cert, err := tls.LoadX509KeyPair(
+			path.Join(s.CertDir, certWriter.ServerCertName),
+			path.Join(s.CertDir, certWriter.ServerKeyName))
+		if err != nil {
+			errCh <- err
+		}
+
+		cfg := &tls.Config{
+			Certificates: []tls.Certificate{cert},
+			NextProtos:   []string{"http1.1"},
+		}
+
+		// TODO: fix address
+		listener, err := tls.Listen("tcp", net.JoinHostPort("0.0.0.0", strconv.Itoa(int(s.Port))), cfg)
+		if err != nil {
+			errCh <- err
+		}
+
 		s.httpServer = &http.Server{
 			Addr:    fmt.Sprintf(":%v", s.Port),
 			Handler: s.sMux,
 		}
-		log.Info("starting the webhook server.")
 		s.httpServer.SetKeepAlivesEnabled(false)
-		errCh <- s.httpServer.ListenAndServeTLS(path.Join(s.CertDir, writer.ServerCertName), path.Join(s.CertDir, writer.ServerKeyName))
+		log.Info("starting the webhook server.")
+		errCh <- s.httpServer.Serve(listener)
 	}
 
 	shutdownHappend := false
