@@ -253,7 +253,7 @@ func (s *Server) run(stop <-chan struct{}) error { // nolint: gocyclo
 				errCh <- err
 			}
 
-			protos := []string{"h2", "http1.1"}
+			protos := []string{"h2", "http/1.1"}
 			if s.DisableHttp2 {
 				protos = protos[1:]
 			}
