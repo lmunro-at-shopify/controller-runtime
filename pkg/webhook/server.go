@@ -23,7 +23,6 @@ import (
 	"io"
 	"net"
 	"net/http"
-	"os"
 	"path"
 	"strconv"
 	"sync"
@@ -69,6 +68,17 @@ type ServerOptions struct {
 
 	// BootstrapOptions contains the options for bootstrapping the admission server.
 	*BootstrapOptions
+
+	// DisableHttp2 will force the server to downgrade to http1.1
+	DisableHttp2 bool
+
+	// DisableKeepAlive will force close the connections after each requests to the server
+	// Disabling Keep-Alive will downgrade the protocol to http1.1
+	DisableKeepAlive bool
+
+	// DisableTLS forces the server to support http only.
+	// Disabling TLS will also disable HTTP 2
+	DisableTLS bool
 }
 
 // BootstrapOptions are options for bootstrapping an admission webhook server.
@@ -160,6 +170,9 @@ type Webhook interface {
 
 // NewServer creates a new admission webhook server.
 func NewServer(name string, mgr manager.Manager, options ServerOptions) (*Server, error) {
+	if options.DisableTLS || options.DisableKeepAlive {
+		options.DisableHttp2 = true
+	}
 	as := &Server{
 		Name:          name,
 		sMux:          http.NewServeMux(),
@@ -226,8 +239,8 @@ func (s *Server) run(stop <-chan struct{}) error { // nolint: gocyclo
 	serveFn := func() {
 		var listener net.Listener
 		var err error
-		if _, found := os.LookupEnv("WEBHOOK_DISABLE_TLS"); found {
-			log.Info("TLS disabled by policy")
+		if s.DisableTLS {
+			log.Info("TLS disabled by configuration")
 			listener, err = net.Listen("tcp", ":"+strconv.Itoa(int(s.Port)))
 			if err != nil {
 				errCh <- err
@@ -240,12 +253,16 @@ func (s *Server) run(stop <-chan struct{}) error { // nolint: gocyclo
 				errCh <- err
 			}
 
-			cfg := &tls.Config{
-				Certificates: []tls.Certificate{cert},
-				NextProtos:   []string{"http1.1"},
+			protos := []string{"h2", "http1.1"}
+			if s.DisableHttp2 {
+				protos = protos[1:]
 			}
 
-			// TODO: fix address
+			cfg := &tls.Config{
+				Certificates: []tls.Certificate{cert},
+				NextProtos:   protos,
+			}
+
 			listener, err = tls.Listen("tcp", ":"+strconv.Itoa(int(s.Port)), cfg)
 			if err != nil {
 				errCh <- err
@@ -256,7 +273,10 @@ func (s *Server) run(stop <-chan struct{}) error { // nolint: gocyclo
 			Addr:    fmt.Sprintf(":%v", s.Port),
 			Handler: s.sMux,
 		}
-		s.httpServer.SetKeepAlivesEnabled(false)
+
+		if s.DisableKeepAlive {
+			s.httpServer.SetKeepAlivesEnabled(false)
+		}
 		log.Info("starting the webhook server.")
 		errCh <- s.httpServer.Serve(listener)
 	}
