@@ -26,18 +26,18 @@ import (
 	"sort"
 	"strconv"
 
-	"k8s.io/api/admissionregistration/v1beta1"
-	admissionregistration "k8s.io/api/admissionregistration/v1beta1"
-	corev1 "k8s.io/api/core/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apimachinery/pkg/util/intstr"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/client"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/client/config"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/admission"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/internal/cert/writer"
 	"github.com/lmunro-at-shopify/controller-runtime/pkg/webhook/types"
+	"k8s.io/api/admissionregistration/v1beta1"
+	admissionregistration "k8s.io/api/admissionregistration/v1beta1"
+	corev1 "k8s.io/api/core/v1"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/apimachinery/pkg/util/intstr"
 )
 
 // setDefault does defaulting for the Server.
@@ -66,6 +66,9 @@ func (s *Server) setServerDefault() {
 	if s.DisableWebhookConfigInstaller == nil {
 		diwc := false
 		s.DisableWebhookConfigInstaller = &diwc
+	}
+	if s.DisableTLS || s.DisableKeepAlive {
+		s.DisableHttp2 = true
 	}
 
 	if s.Client == nil {

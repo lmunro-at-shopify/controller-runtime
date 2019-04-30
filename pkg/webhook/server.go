@@ -170,9 +170,6 @@ type Webhook interface {
 
 // NewServer creates a new admission webhook server.
 func NewServer(name string, mgr manager.Manager, options ServerOptions) (*Server, error) {
-	if options.DisableTLS || options.DisableKeepAlive {
-		options.DisableHttp2 = true
-	}
 	as := &Server{
 		Name:          name,
 		sMux:          http.NewServeMux(),
